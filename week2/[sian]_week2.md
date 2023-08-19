@@ -88,8 +88,6 @@ switch (weather) {
 #### for문
 for 문은 조건식이 거짓으로 평가될 때까지 코드 블록을 반복 실행한다.
 
-![image](https://velog.velcdn.com/images%2Fssonnni%2Fpost%2Fa18be522-c8b7-4714-8847-bd5101e692cd%2Ffor-statement.png)
-
 #### while 문
 while 문은 주어진 조건식의 평가 결과가 참이면 코드 블록을 계속해서 반복실행한다.
 - 조건식의 평가 결과가 boolean 이 아니라면 boolena 값으로 강제 변환하여 논리적 참,거짓을 구별한다.
@@ -408,6 +406,8 @@ if 문이나 for 문 같은 제어문 또는 삼항 조건 연산자의 조건�
 #### 논리곱 연산자 (&&)
 - 두 개의 피연산자가 모두 true로 평가될 때 true를 반환한다.
 - 좌항에서 우항으로 평가된다.
+- 논리합 연산자는 falsy 한 값을 찾아서 계속 우항으로 이동한다. truthy 한 값은 pass 하고, falsy 한 값이 나오면 할당하고 종료한다.
+- 만약 피연산자가 모두 truthy 한 값이라면 가장 우측에 있는 값이 할당된다.
 ```js
 'Cat' && 'Dog'  // Dog
 false && 'Dog'  // false
@@ -481,6 +481,8 @@ Backdrop을 랜더링한는 코드를 작성할 수 있다.
 #### 논리합 연산자 (||)
 - 두 개의 피연산자 중 하나만 true 로 평가되어도 true 를 반환한다.
 - 논리합 연산자도 좌항에서 우항으로 평가가 진행된다.
+- 논리합 연산자는 truthy 한 값을 찾아서 계속 우항으로 이동한다. falsy 한 값은 pass 하고, truthy 한 값이 나오면 할당한다.
+- 만약 피연산자가 모두 falsy 한 값이라면 가장 우측에 있는 값이 할당된다.
 ```js
 'Cat' || 'Dog'  // 'Cat'
 false || 'Dog'  // 'Dog'
